@@ -7,3 +7,4 @@ phases:
   build:
     commands:
       - docker info
+      
