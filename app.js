@@ -7,7 +7,7 @@ const port = 8000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello bigdate\n');
+  res.end('Hello world\n');
 });
 
 server.listen(port, hostname, () => {
