@@ -1,13 +1,30 @@
+
 {
-  "AWSEBDockerrunVersion": "1",
-  "Image": {
-    "Name": "028862531878.dkr.ecr.us-east-1.amazonaws.com/node-js-app",
-    "value": "latest",
-    "Update": "true"
-  },
-  "Ports": [
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
     {
-      "ContainerPort": "8000"
+      "name": "Node-Js-APP",
+      "image": "028862531878.dkr.ecr.us-east-1.amazonaws.com/node-js-app",
+      "environment": [],
+      "essential": true,
+      "cpu": 10,
+      "memory": 2048,
+      "mountPoints": [],
+      "volumesFrom": [],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8000
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/aws/elasticbeanstalk/my-image/var/log/stdouterr.log",
+          "awslogs-region": "us-east-1",
+          "awslogs-datetime-format": "%Y-%m-%d %H:%M:%S.%L"
+        }
+      }
     }
   ]
 }
