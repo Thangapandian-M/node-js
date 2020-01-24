@@ -1,7 +1,8 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "028862531878.dkr.ecr.us-east-1.amazonaws.com/node-js-app:latest",
+    "Name": "028862531878.dkr.ecr.us-east-1.amazonaws.com/node-js-app",
+    "value": "latest",
     "Update": "true"
   },
   "Ports": [
