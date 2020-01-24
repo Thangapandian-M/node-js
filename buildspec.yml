@@ -24,8 +24,9 @@ phases:
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
       - printf '[{"name":"hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG
-  artifacts:
+artifacts:
   files:
     - Dockerrun.aws.json
 
+      
 
